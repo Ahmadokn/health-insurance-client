@@ -28,6 +28,5 @@ This repository contains the **front-end** (client) side of our Health Insurance
 
 1. **Clone this repository** (the client):
    ```sh
-   git clone <this-repo-url>
-   cd health-insurance-client
+   git clone https://github.com/Ahmadokn/health-insurance-client.git
    ```
