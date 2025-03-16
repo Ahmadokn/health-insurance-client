@@ -1,5 +1,3 @@
-// app.js
-
 document.getElementById('risk-form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -43,9 +41,8 @@ document.getElementById('risk-form').addEventListener('submit', async (event) =>
   };
 
   try {
-    // 5. Send data to your Node.js/Express server
-    //    Adjust the URL if your server is on a different port or domain
-    const response = await fetch('http://localhost:3000/api/calculateRisk', {
+    // 5. Send data to server
+    const response = await fetch('https://health-insurance-api-cvbxb6dsd2gyanfp.uaenorth-01.azurewebsites.net/api/calculateRisk', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -72,11 +69,10 @@ document.getElementById('risk-form').addEventListener('submit', async (event) =>
       <p><strong>Risk Category:</strong> ${resultData.riskCategory}</p>
     `;
 
-    // 8. Reveal the results card (it’s initially hidden with style="display:none;")
+
     document.getElementById('resultsCard').style.display = 'block';
 
   } catch (error) {
-    // 9. Handle any errors
     alert(`Error: ${error.message}`);
   }
 });
