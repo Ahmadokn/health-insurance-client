@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Health Insurance Risk Calculator</title>
+  <!-- Ensures mobile-friendly responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Link to our custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Health Insurance Risk Calculator</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="card-header">
+        <h2>Enter Customer Details</h2>
+      </div>
+      <div class="card-body">
+        <p class="instructions">
+          Enter the customer’s details to calculate their insurance risk score. 
+          <br>All calculations are done on the server.
+        </p>
+
+        <form id="risk-form">
+          <!-- Age -->
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+          </div>
+
+          <!-- Height -->
+          <div class="form-group">
+            <label for="heightCm">Height (cm):</label>
+            <input type="number" id="heightCm" name="heightCm" min="60" required />
+          </div>
+
+          <!-- Weight -->
+          <div class="form-group">
+            <label for="weightKg">Weight (kg):</label>
+            <input type="number" id="weightKg" name="weightKg" min="1" required />
+          </div>
+
+          <!-- Blood Pressure Category -->
+          <div class="form-group">
+            <label for="bpCategory">Blood Pressure Category:</label>
+            <select id="bpCategory" name="bpCategory" required>
+              <option value="">-- Select --</option>
+              <option value="normal">Normal</option>
+              <option value="elevated">Elevated</option>
+              <option value="stage1">Stage 1</option>
+              <option value="stage2">Stage 2</option>
+              <option value="crisis">Crisis</option>
+            </select>
+          </div>
+
+          <!-- Family History -->
+          <div class="form-group">
+            <p>Family History (check all that apply):</p>
+            <label>
+              <input type="checkbox" id="diabetes" value="diabetes"> Diabetes
+            </label>
+            <label>
+              <input type="checkbox" id="cancer" value="cancer"> Cancer
+            </label>
+            <label>
+              <input type="checkbox" id="alz" value="alzheimer"> Alzheimer’s
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="btn-container">
+            <button type="submit" class="btn-submit">Calculate Risk</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="card" id="resultsCard" style="display:none;">
+      <div class="card-header">
+        <h2>Results</h2>
+      </div>
+      <div class="card-body" id="results">
+        <!-- Filled dynamically by app.js after form submission -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Health Insurance Calculator Team</p>
+  </footer>
+
+  <!-- Link to your front-end JS -->
+  <script src="app.js"></script>
+</body>
+</html>

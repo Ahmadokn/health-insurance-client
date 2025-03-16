@@ -1,0 +1,153 @@
+/* style.css */
+
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    background: #f3f3f3;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  header {
+    background: #4a90e2; /* nice blue */
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: auto;
+    text-align: center;
+    background: #333;
+    color: #ccc;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Main Content Area */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Card Container */
+  .card {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    padding: 1rem;
+    background: #4a90e2;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* Instructions text */
+  .instructions {
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .form-group input[type="number"],
+  .form-group select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group p {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  
+  /* Checkboxes inline */
+  .form-group label input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  /* Button */
+  .btn-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .btn-submit {
+    background: #4a90e2;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .btn-submit:hover {
+    background: #357ab7;
+  }
+  
+  /* Results Card */
+  #resultsCard .card-header {
+    background: #1abc9c; /* teal green for variety */
+  }
+  
+  /* Media Queries (mobile-friendly) */
+  @media (max-width: 600px) {
+    .card {
+      margin-bottom: 1rem;
+    }
+    .btn-container {
+      justify-content: center;
+    }
+    .btn-submit {
+      width: 100%;
+    }
+  }
